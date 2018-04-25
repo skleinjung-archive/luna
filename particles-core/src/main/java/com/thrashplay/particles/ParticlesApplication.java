@@ -16,6 +16,6 @@ public class ParticlesApplication extends AbstractLunaApplication {
 
     @Bean
     public DefaultLunaConfig getGameConfig() {
-        return new DefaultLunaConfig("blue", "Particles", 640, 480, 60);
+        return new DefaultLunaConfig("blank", "Particles", 640, 480, 60);
     }
 }

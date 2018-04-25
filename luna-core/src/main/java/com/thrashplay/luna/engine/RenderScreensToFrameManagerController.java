@@ -3,6 +3,7 @@ package com.thrashplay.luna.engine;
 import com.thrashplay.luna.engine.loop.AbstractMainLoop;
 import com.thrashplay.luna.engine.screen.ScreenManager;
 import com.thrashplay.luna.graphics.FrameManager;
+import com.thrashplay.luna.graphics.LunaGraphics;
 import org.springframework.stereotype.Component;
 import org.springframework.util.Assert;
 
@@ -31,7 +32,7 @@ public class RenderScreensToFrameManagerController implements AbstractMainLoop.U
 
     @Override
     public void render() {
-        Graphics2D graphics = frameManager.beginFrame();
+        LunaGraphics graphics = frameManager.beginFrame();
         try {
             if (graphics != null) {
                 screenManager.render(graphics);

@@ -1,7 +1,11 @@
 package com.thrashplay.luna.swing;
 
 import com.thrashplay.luna.config.DefaultLunaConfig;
+import com.thrashplay.luna.geom.Rectangle;
 import com.thrashplay.luna.graphics.FrameManager;
+import com.thrashplay.luna.graphics.LunaGraphics;
+import com.thrashplay.luna.graphics.RenderCoordinateMapping;
+import com.thrashplay.luna.graphics.impl.Java2DGraphics;
 import org.springframework.stereotype.Component;
 
 import java.awt.*;
@@ -40,7 +44,7 @@ public class LunaCanvas extends Canvas implements FrameManager {
     }
 
     @Override
-    public Graphics2D beginFrame() {
+    public LunaGraphics beginFrame() {
         if (graphics == null) {
             frameBuffer = new BufferedImage(sceneWidth, sceneHeight, BufferedImage.TYPE_4BYTE_ABGR);
             graphics = (Graphics2D) frameBuffer.getGraphics();
@@ -48,7 +52,7 @@ public class LunaCanvas extends Canvas implements FrameManager {
             // set the clip, so the canvas dimensions can be accessed by Drawable instances
             graphics.setClip(0, 0, sceneWidth, sceneHeight);
         }
-        return graphics;
+        return new Java2DGraphics(graphics);
     }
 
     @Override
@@ -56,13 +60,10 @@ public class LunaCanvas extends Canvas implements FrameManager {
         if (graphics != null) {
             graphics.dispose();
 
-//            com.thrashplay.luna.api.geom.Rectangle sceneBounds = new RenderCoordinateMapping(sceneWidth, sceneHeight, getWidth(), getHeight()).getSceneBoundsInScreenCoordinates();
-//            float scale = (float) sceneBounds.getWidth() / sceneWidth;
-//            AffineTransform tx = AffineTransform.getTranslateInstance(sceneBounds.getLeft(), sceneBounds.getTop());
-//            tx.scale(scale, scale);
-
-            // noop transform
-            AffineTransform tx = AffineTransform.getTranslateInstance(0, 0);
+            Rectangle sceneBounds = new RenderCoordinateMapping(sceneWidth, sceneHeight, getWidth(), getHeight()).getSceneBoundsInScreenCoordinates();
+            float scale = (float) sceneBounds.getWidth() / sceneWidth;
+            AffineTransform tx = AffineTransform.getTranslateInstance(sceneBounds.getLeft(), sceneBounds.getTop());
+            tx.scale(scale, scale);
 
             Graphics2D backBufferGraphics = (Graphics2D) bufferStrategy.getDrawGraphics();
             backBufferGraphics.setColor(Color.GRAY);

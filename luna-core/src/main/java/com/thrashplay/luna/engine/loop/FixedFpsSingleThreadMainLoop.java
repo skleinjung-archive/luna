@@ -24,25 +24,25 @@ public class FixedFpsSingleThreadMainLoop extends AbstractSingleThreadMainLoop {
             Timing timing = new Timing();
             timing.reset();
             long elapsed = 0;
-            long frameDuration = 1000 / targetUpdatesPerSecond;
+            long frameDurationInNanos = Math.round(1000D / targetUpdatesPerSecond * 1000000D);
 
             while (running) {
                 elapsed += timing.elapsedAs(TimeUnit.NANOSECONDS);
                 timing.reset();
 
-                while (TimeUnit.MILLISECONDS.convert(elapsed, TimeUnit.NANOSECONDS) >= frameDuration) {
+                while (elapsed >= frameDurationInNanos) {
                     update(1.0f);
-                    elapsed -= TimeUnit.NANOSECONDS.convert(frameDuration, TimeUnit.MILLISECONDS);
+                    elapsed -= frameDurationInNanos;
                 }
 
                 render();
 
                 // we wait for 1ms because the observed updates per second is 1/2 the requested when we don't
-                synchronized (Thread.currentThread()) {
-                    try {
-                        Thread.currentThread().wait(1);
-                    } catch (InterruptedException e) { /* do nothing */ }
-                }
+//                synchronized (Thread.currentThread()) {
+//                    try {
+//                        Thread.currentThread().wait(1);
+//                    } catch (InterruptedException e) { /* do nothing */ }
+//                }
                 Thread.yield();
             }
         };

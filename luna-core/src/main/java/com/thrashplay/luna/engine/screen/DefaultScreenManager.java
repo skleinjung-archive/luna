@@ -3,6 +3,7 @@ package com.thrashplay.luna.engine.screen;
 import com.thrashplay.luna.LunaException;
 import com.thrashplay.luna.config.LunaGameConfig;
 import com.thrashplay.luna.engine.Updateable;
+import com.thrashplay.luna.graphics.LunaGraphics;
 import org.springframework.stereotype.Component;
 import org.springframework.util.Assert;
 
@@ -76,7 +77,7 @@ public class DefaultScreenManager implements Updateable, ScreenManager {
     }
 
     @Override
-    public void render(Graphics2D graphics) {
+    public void render(LunaGraphics graphics) {
         if (currentScreen != null) {
             currentScreen.render(graphics);
         }
