@@ -46,8 +46,20 @@ public class LunaCanvas extends Canvas implements FrameManager {
     @Override
     public LunaGraphics beginFrame() {
         if (graphics == null) {
-            frameBuffer = new BufferedImage(sceneWidth, sceneHeight, BufferedImage.TYPE_4BYTE_ABGR);
-            graphics = (Graphics2D) frameBuffer.getGraphics();
+            if (frameBuffer == null) {
+                frameBuffer = new BufferedImage(sceneWidth, sceneHeight, BufferedImage.TYPE_4BYTE_ABGR);
+            }
+            //graphics = (Graphics2D) frameBuffer.getGraphics();
+
+            Rectangle sceneBounds = new RenderCoordinateMapping(sceneWidth, sceneHeight, getWidth(), getHeight()).getSceneBoundsInScreenCoordinates();
+            float scale = (float) sceneBounds.getWidth() / sceneWidth;
+            AffineTransform tx = AffineTransform.getTranslateInstance(sceneBounds.getLeft(), sceneBounds.getTop());
+            tx.scale(scale, scale);
+
+            graphics = (Graphics2D) bufferStrategy.getDrawGraphics();
+            graphics.setColor(Color.GRAY);
+            graphics.fillRect(0, 0, getWidth(), getHeight());
+            graphics.setTransform(tx);
 
             // set the clip, so the canvas dimensions can be accessed by Drawable instances
             graphics.setClip(0, 0, sceneWidth, sceneHeight);
@@ -60,16 +72,16 @@ public class LunaCanvas extends Canvas implements FrameManager {
         if (graphics != null) {
             graphics.dispose();
 
-            Rectangle sceneBounds = new RenderCoordinateMapping(sceneWidth, sceneHeight, getWidth(), getHeight()).getSceneBoundsInScreenCoordinates();
-            float scale = (float) sceneBounds.getWidth() / sceneWidth;
-            AffineTransform tx = AffineTransform.getTranslateInstance(sceneBounds.getLeft(), sceneBounds.getTop());
-            tx.scale(scale, scale);
-
-            Graphics2D backBufferGraphics = (Graphics2D) bufferStrategy.getDrawGraphics();
-            backBufferGraphics.setColor(Color.GRAY);
-            backBufferGraphics.fillRect(0, 0, getWidth(), getHeight());
-            backBufferGraphics.drawImage(frameBuffer, tx, null);
-            backBufferGraphics.dispose();
+//            Rectangle sceneBounds = new RenderCoordinateMapping(sceneWidth, sceneHeight, getWidth(), getHeight()).getSceneBoundsInScreenCoordinates();
+//            float scale = (float) sceneBounds.getWidth() / sceneWidth;
+//            AffineTransform tx = AffineTransform.getTranslateInstance(sceneBounds.getLeft(), sceneBounds.getTop());
+//            tx.scale(scale, scale);
+//
+//            Graphics2D backBufferGraphics = (Graphics2D) bufferStrategy.getDrawGraphics();
+//            backBufferGraphics.setColor(Color.GRAY);
+//            backBufferGraphics.fillRect(0, 0, getWidth(), getHeight());
+//            backBufferGraphics.drawImage(frameBuffer, tx, null);
+//            backBufferGraphics.dispose();
 
             bufferStrategy.show();
             graphics = null;

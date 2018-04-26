@@ -1,5 +1,7 @@
 package com.thrashplay.luna.graphics;
 
+import java.awt.Color;
+
 /**
  * @author Sean Kleinjung
  */
@@ -47,29 +49,33 @@ public interface LunaGraphics {
 
     void scale(int sx, int sy);
 
+    // state manipulation methods
+
+    void setColor(int color);
+
     // rendering methods
 
     void clearScreen(int color);
 
-    void drawLine(int x, int y, int x2, int y2, int color);
+    void drawLine(int x, int y, int x2, int y2);
 
-    void drawRect(int x, int y, int width, int height, int color);
+    void drawRect(int x, int y, int width, int height);
 
-    void fillRect(int x, int y, int width, int height, int color);
+    void fillRect(int x, int y, int width, int height);
 
-    void drawCircle(int x, int y, int radius, int paint);
+    void drawCircle(int x, int y, int radius);
 
-    void fillCircle(int x, int y, int radius, int paint);
+    void fillCircle(int x, int y, int radius);
 
     void drawARGB(int a, int r, int g, int b);
 
-    void drawString(String text, int x, int y, int color);
+    void drawString(String text, int x, int y);
 
-    void drawString(String text, int x, int y, int color, int size);
+    void drawString(String text, int x, int y, int size);
 
-    void drawString(String text, int x, int y, int color, int size, HorizontalAlignment horizontalAlignment);
+    void drawString(String text, int x, int y, int size, HorizontalAlignment horizontalAlignment);
 
-    void drawString(String text, int x, int y, int color, int size, HorizontalAlignment horizontalAlignment, VerticalAlignment verticalAlignment);
+    void drawString(String text, int x, int y, int size, HorizontalAlignment horizontalAlignment, VerticalAlignment verticalAlignment);
 
     // blitting methods
 

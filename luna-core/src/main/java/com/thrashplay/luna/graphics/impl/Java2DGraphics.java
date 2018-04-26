@@ -43,6 +43,11 @@ public class Java2DGraphics implements LunaGraphics {
     }
 
     @Override
+    public void setColor(int color) {
+        graphics.setColor(new Color(color, true));
+    }
+
+    @Override
     public void clearScreen(int color) {
         graphics.setColor(new Color(color, false));
         java.awt.Rectangle clip = graphics.getClipBounds();
@@ -50,32 +55,27 @@ public class Java2DGraphics implements LunaGraphics {
     }
 
     @Override
-    public void drawLine(int x, int y, int x2, int y2, int color) {
-        graphics.setColor(new Color(color, true));
+    public void drawLine(int x, int y, int x2, int y2) {
         graphics.drawLine(x, y, x2, y2);
     }
 
     @Override
-    public void drawRect(int x, int y, int width, int height, int color) {
-        graphics.setColor(new Color(color, true));
+    public void drawRect(int x, int y, int width, int height) {
         graphics.drawRect(x, y, width, height);
     }
 
     @Override
-    public void fillRect(int x, int y, int width, int height, int color) {
-        graphics.setColor(new Color(color, true));
+    public void fillRect(int x, int y, int width, int height) {
         graphics.fillRect(x, y, width, height);
     }
 
     @Override
-    public void drawCircle(int x, int y, int radius, int paint) {
-        graphics.setColor(new Color(paint, true));
+    public void drawCircle(int x, int y, int radius) {
         graphics.drawOval(x - radius, y - radius, radius * 2, radius * 2);
     }
 
     @Override
-    public void fillCircle(int x, int y, int radius, int paint) {
-        graphics.setColor(new Color(paint, true));
+    public void fillCircle(int x, int y, int radius) {
         graphics.fillOval(x - radius, y - radius, radius * 2, radius * 2);
     }
 
@@ -87,26 +87,23 @@ public class Java2DGraphics implements LunaGraphics {
     }
 
     @Override
-    public void drawString(String text, int x, int y, int color) {
-        graphics.setColor(new Color(color, true));
+    public void drawString(String text, int x, int y) {
         graphics.drawString(text, x, y);
     }
 
     @Override
-    public void drawString(String text, int x, int y, int color, int size) {
-        graphics.setColor(new Color(color, true));
+    public void drawString(String text, int x, int y, int size) {
         graphics.setFont(graphics.getFont().deriveFont((float) size));
         graphics.drawString(text, x, y);
     }
 
     @Override
-    public void drawString(String text, int x, int y, int color, int size, HorizontalAlignment horizontalAlignment) {
-        drawString(text, x, y, color, size, horizontalAlignment, VerticalAlignment.Bottom);
+    public void drawString(String text, int x, int y, int size, HorizontalAlignment horizontalAlignment) {
+        drawString(text, x, y, size, horizontalAlignment, VerticalAlignment.Bottom);
     }
 
     @Override
-    public void drawString(String text, int x, int y, int color, int size, HorizontalAlignment horizontalAlignment, VerticalAlignment verticalAlignment) {
-        graphics.setColor(new Color(color, true));
+    public void drawString(String text, int x, int y, int size, HorizontalAlignment horizontalAlignment, VerticalAlignment verticalAlignment) {
         graphics.setFont(graphics.getFont().deriveFont((float) size));
 
         FontMetrics fm = graphics.getFontMetrics();
