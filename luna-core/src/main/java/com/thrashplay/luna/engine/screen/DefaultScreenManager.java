@@ -16,7 +16,7 @@ import java.util.Map;
  * @author Sean Kleinjung
  */
 @Component
-public class DefaultScreenManager implements Updateable, ScreenManager {
+public class DefaultScreenManager implements ScreenManager {
 
     private Screen currentScreen;
     private Map<String, Screen> screens = new HashMap<>();

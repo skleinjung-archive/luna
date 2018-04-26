@@ -1,6 +1,4 @@
-package com.thrashplay.luna.engine;
-
-import com.thrashplay.luna.engine.loop.Timing;
+package com.thrashplay.luna.util;
 
 import java.util.concurrent.TimeUnit;
 

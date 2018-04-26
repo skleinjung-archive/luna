@@ -1,16 +1,18 @@
 package com.thrashplay.luna.engine.loop;
 
+import com.thrashplay.luna.util.Timing;
+
 import java.util.concurrent.TimeUnit;
 
 /**
  * @author Sean Kleinjung
  */
-public class FixedFpsSingleThreadMainLoop extends AbstractSingleThreadMainLoop {
+public class FixedFpsSingleThreadGameLoop extends AbstractSingleThreadGameLoop {
 
     private int targetUpdatesPerSecond = 0;
 
-    public FixedFpsSingleThreadMainLoop(UpdateController updateController, RenderController renderController, int targetUpdatesPerSecond) {
-        super(updateController, renderController);
+    public FixedFpsSingleThreadGameLoop(GameLoopUpdateCallback gameLoopUpdateCallback, GameLoopRenderCallback gameLoopRenderCallback, int targetUpdatesPerSecond) {
+        super(gameLoopUpdateCallback, gameLoopRenderCallback);
 
         this.targetUpdatesPerSecond = targetUpdatesPerSecond;
         if (targetUpdatesPerSecond < 1) {

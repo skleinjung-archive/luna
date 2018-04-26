@@ -1,9 +1,11 @@
 package com.thrashplay.luna;
 
 import com.thrashplay.luna.config.LunaLoopConfig;
+import com.thrashplay.luna.engine.loop.GameLoopRenderCallback;
+import com.thrashplay.luna.engine.loop.GameLoopUpdateCallback;
 import com.thrashplay.luna.swing.LunaWindow;
-import com.thrashplay.luna.engine.loop.AbstractMainLoop;
-import com.thrashplay.luna.engine.loop.FixedFpsSingleThreadMainLoop;
+import com.thrashplay.luna.engine.loop.AbstractGameLoop;
+import com.thrashplay.luna.engine.loop.FixedFpsSingleThreadGameLoop;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.context.annotation.Bean;
@@ -21,8 +23,8 @@ public abstract class AbstractLunaApplication {
     }
 
     @Bean
-    public AbstractMainLoop getMainLoop(LunaLoopConfig loopConfig, AbstractMainLoop.UpdateController updateController, AbstractMainLoop.RenderController renderController) {
-        return new FixedFpsSingleThreadMainLoop(updateController, renderController, loopConfig.getTargetUpdatesPerSecond());
+    public AbstractGameLoop getMainLoop(LunaLoopConfig loopConfig, GameLoopUpdateCallback gameLoopUpdateCallback, GameLoopRenderCallback gameLoopRenderCallback) {
+        return new FixedFpsSingleThreadGameLoop(gameLoopUpdateCallback, gameLoopRenderCallback, loopConfig.getTargetUpdatesPerSecond());
     }
 
     @Bean

@@ -1,19 +1,18 @@
 package com.thrashplay.luna.engine;
 
-import com.thrashplay.luna.engine.loop.AbstractMainLoop;
+import com.thrashplay.luna.engine.loop.GameLoopRenderCallback;
+import com.thrashplay.luna.engine.loop.GameLoopUpdateCallback;
 import com.thrashplay.luna.engine.screen.ScreenManager;
 import com.thrashplay.luna.graphics.FrameManager;
 import com.thrashplay.luna.graphics.LunaGraphics;
 import org.springframework.stereotype.Component;
 import org.springframework.util.Assert;
 
-import java.awt.*;
-
 /**
  * @author Sean Kleinjung
  */
 @Component
-public class RenderScreensToFrameManagerController implements AbstractMainLoop.UpdateController, AbstractMainLoop.RenderController {
+public class RenderScreensToFrameManagerController implements GameLoopUpdateCallback, GameLoopRenderCallback {
     private FrameManager frameManager;
     private ScreenManager screenManager;
 

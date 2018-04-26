@@ -1,7 +1,7 @@
 package com.thrashplay.particles.runetrace;
 
 import com.thrashplay.luna.engine.entity.GameEntity;
-import com.thrashplay.luna.engine.loop.Timing;
+import com.thrashplay.luna.util.Timing;
 import com.thrashplay.luna.graphics.Color;
 import com.thrashplay.luna.graphics.LunaGraphics;
 import com.thrashplay.luna.math.Random;

@@ -1,6 +1,6 @@
 package com.thrashplay.luna.renderable;
 
-import com.thrashplay.luna.engine.FpsCounter;
+import com.thrashplay.luna.util.FpsCounter;
 import com.thrashplay.luna.engine.Updateable;
 import com.thrashplay.luna.graphics.LunaGraphics;
 import com.thrashplay.luna.graphics.Renderable;

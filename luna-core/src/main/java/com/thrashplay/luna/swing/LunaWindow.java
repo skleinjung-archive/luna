@@ -2,7 +2,7 @@ package com.thrashplay.luna.swing;
 
 import com.thrashplay.luna.config.LunaGameConfig;
 import com.thrashplay.luna.config.LunaWindowConfig;
-import com.thrashplay.luna.engine.loop.MainLoop;
+import com.thrashplay.luna.engine.loop.GameLoop;
 import org.springframework.stereotype.Component;
 import org.springframework.util.Assert;
 
@@ -19,13 +19,13 @@ public class LunaWindow extends JFrame {
     @SuppressWarnings("WeakerAccess")
     protected LunaCanvas lunaCanvas;
 
-    private MainLoop mainLoop;
+    private GameLoop gameLoop;
 
-    public LunaWindow(LunaGameConfig gameConfig, LunaWindowConfig windowConfig, MainLoop mainLoop, LunaCanvas lunaCanvas) {
+    public LunaWindow(LunaGameConfig gameConfig, LunaWindowConfig windowConfig, GameLoop gameLoop, LunaCanvas lunaCanvas) {
         super(windowConfig.getWindowTitle());
 
-        Assert.notNull(mainLoop, "mainLoop cannot be null");
-        this.mainLoop = mainLoop;
+        Assert.notNull(gameLoop, "mainLoop cannot be null");
+        this.gameLoop = gameLoop;
 
         Assert.notNull(lunaCanvas, "lunaCanvas cannot be null");
         this.lunaCanvas = lunaCanvas;
@@ -48,10 +48,10 @@ public class LunaWindow extends JFrame {
     }
 
     public void onPause() {
-        mainLoop.pause();
+        gameLoop.pause();
     }
 
     public void onResume() {
-        mainLoop.resume();
+        gameLoop.resume();
     }
 }

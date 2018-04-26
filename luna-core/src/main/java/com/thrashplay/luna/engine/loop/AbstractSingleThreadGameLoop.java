@@ -6,15 +6,15 @@ import org.slf4j.LoggerFactory;
 /**
  * @author Sean Kleinjung
  */
-public abstract class AbstractSingleThreadMainLoop extends AbstractMainLoop {
+public abstract class AbstractSingleThreadGameLoop extends AbstractGameLoop {
 
-    private static final Logger log = LoggerFactory.getLogger(AbstractSingleThreadMainLoop.class);
+    private static final Logger log = LoggerFactory.getLogger(AbstractSingleThreadGameLoop.class);
 
     protected volatile boolean running = false;
     private Thread thread = null;
 
-    protected AbstractSingleThreadMainLoop(UpdateController updateController, RenderController renderController) {
-        super(updateController, renderController);
+    protected AbstractSingleThreadGameLoop(GameLoopUpdateCallback gameLoopUpdateCallback, GameLoopRenderCallback gameLoopRenderCallback) {
+        super(gameLoopUpdateCallback, gameLoopRenderCallback);
     }
 
     protected abstract Runnable getRunnable();
