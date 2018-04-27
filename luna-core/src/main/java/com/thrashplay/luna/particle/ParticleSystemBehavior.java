@@ -1,4 +1,4 @@
-package com.thrashplay.particles.particle;
+package com.thrashplay.luna.particle;
 
 /**
  * @author Sean Kleinjung

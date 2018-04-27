@@ -1,4 +1,4 @@
-package com.thrashplay.particles.particle;
+package com.thrashplay.luna.particle;
 
 import com.thrashplay.luna.math.Floats;
 import com.thrashplay.luna.math.MathUtils;

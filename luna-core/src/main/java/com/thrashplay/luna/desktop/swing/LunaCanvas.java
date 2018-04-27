@@ -1,11 +1,11 @@
-package com.thrashplay.luna.swing;
+package com.thrashplay.luna.desktop.swing;
 
 import com.thrashplay.luna.config.DefaultLunaConfig;
 import com.thrashplay.luna.geom.Rectangle;
 import com.thrashplay.luna.graphics.FrameManager;
 import com.thrashplay.luna.graphics.LunaGraphics;
 import com.thrashplay.luna.graphics.RenderCoordinateMapping;
-import com.thrashplay.luna.graphics.impl.Java2DGraphics;
+import com.thrashplay.luna.desktop.graphics.Java2DGraphics;
 import org.springframework.stereotype.Component;
 
 import java.awt.*;

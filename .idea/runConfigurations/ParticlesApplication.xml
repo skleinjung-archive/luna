@@ -3,11 +3,11 @@
     <module name="particles-core" />
     <extension name="coverage">
       <pattern>
-        <option name="PATTERN" value="com.thrashplay.particles.*" />
+        <option name="PATTERN" value="com.thrashplay.runetrace.*" />
         <option name="ENABLED" value="true" />
       </pattern>
     </extension>
-    <option name="SPRING_BOOT_MAIN_CLASS" value="com.thrashplay.particles.ParticlesApplication" />
+    <option name="SPRING_BOOT_MAIN_CLASS" value="com.thrashplay.runetrace.ParticlesApplication" />
     <option name="ALTERNATIVE_JRE_PATH" />
     <method />
   </configuration>

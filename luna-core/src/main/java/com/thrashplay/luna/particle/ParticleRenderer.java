@@ -1,4 +1,4 @@
-package com.thrashplay.particles.particle;
+package com.thrashplay.luna.particle;
 
 import com.thrashplay.luna.engine.entity.GameEntity;
 import com.thrashplay.luna.graphics.LunaGraphics;

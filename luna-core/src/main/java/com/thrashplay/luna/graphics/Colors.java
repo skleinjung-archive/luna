@@ -5,7 +5,7 @@ import com.thrashplay.luna.LunaException;
 /**
  * @author Sean Kleinjung
  */
-public class Color {
+public class Colors {
     public static int pack(int alpha, int red, int green, int blue) {
         checkRange("alpha", alpha);
         checkRange("red", red);

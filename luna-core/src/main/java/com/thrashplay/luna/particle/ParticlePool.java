@@ -1,11 +1,9 @@
-package com.thrashplay.particles.particle;
+package com.thrashplay.luna.particle;
 
 import com.thrashplay.luna.LunaException;
 
-import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
-import java.util.Stack;
 
 /**
  * @author Sean Kleinjung

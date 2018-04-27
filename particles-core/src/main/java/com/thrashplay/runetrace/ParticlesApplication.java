@@ -1,4 +1,4 @@
-package com.thrashplay.particles;
+package com.thrashplay.runetrace;
 
 import com.thrashplay.luna.spring.LunaApplication;
 import com.thrashplay.luna.config.DefaultLunaConfig;

@@ -1,24 +1,35 @@
-package com.thrashplay.particles.screen;
+package com.thrashplay.runetrace.screen;
 
 import com.thrashplay.luna.engine.entity.GameEntity;
 import com.thrashplay.luna.engine.entity.GameEntityAdapter;
+import com.thrashplay.luna.engine.entity.UpdateableFacet;
 import com.thrashplay.luna.engine.screen.DefaultScreen;
 import com.thrashplay.luna.facet.Movement;
 import com.thrashplay.luna.facet.Position;
+import com.thrashplay.luna.input.PointerManager;
 import com.thrashplay.luna.renderable.ClearScreen;
 import com.thrashplay.luna.renderable.FpsDisplay;
-import com.thrashplay.particles.particle.GravityParticle;
-import com.thrashplay.particles.particle.Particle;
-import com.thrashplay.particles.particle.ParticlePool;
-import com.thrashplay.particles.particle.ParticleSystem;
-import com.thrashplay.particles.runetrace.RuneTraceParticleSystemBehavior;
+import com.thrashplay.luna.particle.GravityParticle;
+import com.thrashplay.luna.particle.ParticlePool;
+import com.thrashplay.luna.particle.ParticleSystem;
+import com.thrashplay.runetrace.facet.LineDrawingFacet;
+import com.thrashplay.runetrace.particle.RuneTraceParticleSystemBehavior;
 import org.springframework.stereotype.Component;
+import org.springframework.util.Assert;
 
 /**
  * @author Sean Kleinjung
  */
 @Component
 public class ParticlesScreen extends DefaultScreen {
+
+    private PointerManager pointerManager;
+
+    public ParticlesScreen(PointerManager pointerManager) {
+        Assert.notNull(pointerManager, "pointerManager cannot be null");
+        this.pointerManager = pointerManager;
+    }
+
     @Override
     public String getName() {
         return "particles";
@@ -32,7 +43,13 @@ public class ParticlesScreen extends DefaultScreen {
         GameEntity particles = new GameEntity("particles");
         particles.addFacet(new Position(400, 300));
         particles.addFacet(new Movement());
-        particles.addFacet(new ParticleSystem<>(new ParticlePool<>(GravityParticle.class), new RuneTraceParticleSystemBehavior()));
+        particles.addFacet(new ParticleSystem<>(new ParticlePool<>(GravityParticle.class), new RuneTraceParticleSystemBehavior(pointerManager)));
+        particles.addFacet((UpdateableFacet) (gameEntity, delta) -> {
+            Position position = gameEntity.getFacet(Position.class);
+            position.setX(pointerManager.getX());
+            position.setY(pointerManager.getY());
+        });
+        particles.addFacet(new LineDrawingFacet(pointerManager));
         gem.register(particles);
 
 //        GameEntity rectangle = new GameEntity("rectangle");
@@ -49,5 +66,10 @@ public class ParticlesScreen extends DefaultScreen {
 //            graphics.fillRect((int) x - 50, (int) y - 50, 100, 100, 0xffC39738);
 //        });
 //        gem.register(rectangle);
+    }
+
+    @Override
+    protected void doShutdown() {
+        super.doShutdown();
     }
 }

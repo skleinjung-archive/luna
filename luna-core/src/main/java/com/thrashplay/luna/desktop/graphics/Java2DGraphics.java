@@ -1,4 +1,4 @@
-package com.thrashplay.luna.graphics.impl;
+package com.thrashplay.luna.desktop.graphics;
 
 import com.thrashplay.luna.graphics.LunaGraphics;
 import org.springframework.util.Assert;
@@ -45,6 +45,11 @@ public class Java2DGraphics implements LunaGraphics {
     @Override
     public void setColor(int color) {
         graphics.setColor(new Color(color, true));
+    }
+
+    @Override
+    public void setStrokeWidth(int width) {
+        graphics.setStroke(new BasicStroke(width));
     }
 
     @Override

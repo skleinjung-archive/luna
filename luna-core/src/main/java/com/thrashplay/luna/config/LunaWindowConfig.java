@@ -5,8 +5,4 @@ package com.thrashplay.luna.config;
  */
 public interface LunaWindowConfig {
     String getWindowTitle();
-
-    int getSceneWidth();
-
-    int getSceneHeight();
 }

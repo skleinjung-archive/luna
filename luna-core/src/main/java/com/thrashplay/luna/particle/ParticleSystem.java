@@ -1,4 +1,4 @@
-package com.thrashplay.particles.particle;
+package com.thrashplay.luna.particle;
 
 import com.thrashplay.luna.LunaException;
 import com.thrashplay.luna.engine.entity.GameEntity;
@@ -63,13 +63,13 @@ public class ParticleSystem<T extends Particle> implements UpdateableFacet, Rend
             throw new LunaException(String.format("Cannot render entity '%s': there is no Position facet", gameEntity.getId()));
         }
 
-        graphics.saveTransform();
+//        graphics.saveTransform();
         try {
-            graphics.translate((int) position.getX(), (int) position.getY());
+//            graphics.translate((int) position.getX(), (int) position.getY());
 
             particleRenderer.renderParticles(gameEntity, this, graphics, particles);
         } finally {
-            graphics.restoreTransform();
+//            graphics.restoreTransform();
         }
     }
 }

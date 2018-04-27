@@ -53,6 +53,8 @@ public interface LunaGraphics {
 
     void setColor(int color);
 
+    void setStrokeWidth(int width);
+
     // rendering methods
 
     void clearScreen(int color);
