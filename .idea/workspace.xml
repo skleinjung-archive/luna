@@ -125,8 +125,8 @@
             <file leaf-file-name="RuneTraceParticleSystemBehavior.java" pinned="false" current-in-tab="true">
               <entry file="file://$PROJECT_DIR$/particles-core/src/main/java/com/thrashplay/runetrace/particle/RuneTraceParticleSystemBehavior.java">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="649">
-                    <caret line="45" selection-start-line="45" selection-end-line="45" />
+                  <state relative-caret-position="904">
+                    <caret line="91" lean-forward="true" selection-start-line="22" selection-start-column="45" selection-end-line="91" />
                     <folding>
                       <element signature="imports" expanded="true" />
                       <element signature="e#991#992#0" expanded="true" />
@@ -168,8 +168,8 @@
       <file leaf-file-name="ParticlesScreen.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/particles-core/src/main/java/com/thrashplay/runetrace/screen/ParticlesScreen.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="322">
-              <caret line="45" column="141" selection-start-line="45" selection-start-column="141" selection-end-line="45" selection-end-column="141" />
+            <state relative-caret-position="373">
+              <caret line="46" column="145" lean-forward="true" selection-start-line="46" selection-start-column="17" selection-end-line="46" selection-end-column="145" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#2457#2458#0" expanded="true" />
@@ -179,15 +179,48 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LineDrawingFacet.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="LineDrawingFacet.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/particles-core/src/main/java/com/thrashplay/runetrace/facet/LineDrawingFacet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="19" selection-start-line="19" selection-end-line="19" />
+            <state relative-caret-position="322">
+              <caret line="52" column="50" lean-forward="true" selection-start-line="52" selection-start-column="50" selection-end-line="52" selection-end-column="50" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#641#642#0" expanded="true" />
-                <element signature="e#693#694#0" expanded="true" />
+                <element signature="e#712#713#0" expanded="true" />
+                <element signature="e#764#765#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ShapeDrawingFacet.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/particles-core/src/main/java/com/thrashplay/runetrace/facet/ShapeDrawingFacet.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="509">
+              <caret line="55" column="116" selection-start-line="55" selection-start-column="116" selection-end-line="55" selection-end-column="116" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="OngoingLineParticleSystemBehavior.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/particles-core/src/main/java/com/thrashplay/runetrace/particle/OngoingLineParticleSystemBehavior.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="233">
+              <caret line="61" column="90" selection-start-line="61" selection-start-column="90" selection-end-line="61" selection-end-column="90" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LunaCanvas.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/luna-core/src/main/java/com/thrashplay/luna/desktop/swing/LunaCanvas.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="305">
+              <caret line="64" column="20" selection-start-line="64" selection-start-column="20" selection-end-line="64" selection-end-column="20" />
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -196,8 +229,8 @@
       <file leaf-file-name="LunaGraphics.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/luna-core/src/main/java/com/thrashplay/luna/graphics/LunaGraphics.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="55" column="35" selection-start-line="55" selection-start-column="35" selection-end-line="55" selection-end-column="35" />
+            <state relative-caret-position="232">
+              <caret line="71" column="19" selection-start-line="71" selection-start-column="19" selection-end-line="71" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -205,16 +238,18 @@
       <file leaf-file-name="Java2DGraphics.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/luna-core/src/main/java/com/thrashplay/luna/desktop/graphics/Java2DGraphics.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="62" column="16" selection-start-line="62" selection-start-column="16" selection-end-line="62" selection-end-column="16" />
+            <state relative-caret-position="283">
+              <caret line="87" column="26" selection-start-line="87" selection-start-column="26" selection-end-line="87" selection-end-column="26" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1102#1103#0" expanded="true" />
                 <element signature="e#1159#1160#0" expanded="true" />
                 <element signature="e#1218#1219#0" expanded="true" />
-                <element signature="e#1272#1273#0" expanded="true" />
+                <element signature="e#1305#1306#0" expanded="true" />
                 <element signature="e#1473#1474#0" expanded="true" />
                 <element signature="e#1520#1521#0" expanded="true" />
+                <element signature="e#2275#2276#0" expanded="true" />
+                <element signature="e#2306#2307#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -225,24 +260,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="322">
               <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LunaWindowConfig.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/luna-core/src/main/java/com/thrashplay/luna/config/LunaWindowConfig.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" selection-start-line="7" selection-end-line="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LunaSceneConfig.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/luna-core/src/main/java/com/thrashplay/luna/config/LunaSceneConfig.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="25" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -283,9 +300,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/luna-core/src/main/java/com/thrashplay/luna/graphics/impl/Java2DGraphics.java" />
-        <option value="$PROJECT_DIR$/particles-core/src/main/java/com/thrashplay/particles/ParticlesApplication.java" />
-        <option value="$PROJECT_DIR$/luna-core/src/main/java/com/thrashplay/luna/engine/screen/DefaultScreen.java" />
         <option value="$PROJECT_DIR$/luna-core/src/main/java/com/thrashplay/luna/engine/loop/FixedFpsSingleThreadMainLoop.java" />
         <option value="$PROJECT_DIR$/luna-core/src/main/java/com/thrashplay/luna/engine/RenderScreensToFrameManagerController.java" />
         <option value="$PROJECT_DIR$/luna-core/src/main/java/com/thrashplay/luna/engine/GameEntityManager.java" />
@@ -329,11 +343,14 @@
         <option value="$PROJECT_DIR$/particles-core/src/main/java/com/thrashplay/particles/runetrace/RuneTraceParticleSystemBehavior.java" />
         <option value="$PROJECT_DIR$/particles-core/src/main/java/com/thrashplay/particles/screen/ParticlesScreen.java" />
         <option value="$PROJECT_DIR$/particles-core/src/main/java/com/thrashplay/runetrace/particle/RuneTraceParticleSystemBehavior.java" />
-        <option value="$PROJECT_DIR$/particles-core/src/main/java/com/thrashplay/runetrace/screen/ParticlesScreen.java" />
-        <option value="$PROJECT_DIR$/luna-core/src/main/java/com/thrashplay/luna/graphics/LunaGraphics.java" />
-        <option value="$PROJECT_DIR$/luna-core/src/main/java/com/thrashplay/luna/desktop/graphics/Java2DGraphics.java" />
         <option value="$PROJECT_DIR$/luna-core/src/main/java/com/thrashplay/luna/desktop/swing/LunaWindow.java" />
         <option value="$PROJECT_DIR$/particles-core/src/main/java/com/thrashplay/runetrace/facet/LineDrawingFacet.java" />
+        <option value="$PROJECT_DIR$/luna-core/src/main/java/com/thrashplay/luna/desktop/graphics/Java2DGraphics.java" />
+        <option value="$PROJECT_DIR$/luna-core/src/main/java/com/thrashplay/luna/graphics/LunaGraphics.java" />
+        <option value="$PROJECT_DIR$/particles-core/src/main/java/com/thrashplay/runetrace/screen/ParticlesScreen.java" />
+        <option value="$PROJECT_DIR$/luna-core/src/main/java/com/thrashplay/luna/desktop/swing/LunaCanvas.java" />
+        <option value="$PROJECT_DIR$/particles-core/src/main/java/com/thrashplay/runetrace/facet/ShapeDrawingFacet.java" />
+        <option value="$PROJECT_DIR$/particles-core/src/main/java/com/thrashplay/runetrace/particle/OngoingLineParticleSystemBehavior.java" />
       </list>
     </option>
   </component>
@@ -656,11 +673,11 @@
       <recent name="com.thrashplay.luna.config" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.thrashplay.runetrace.facet" />
       <recent name="com.thrashplay.particles.particle" />
       <recent name="com.thrashplay.luna.facet" />
       <recent name="com.thrashplay.luna.graphics" />
       <recent name="com.thrashplay.luna.engine.entity" />
-      <recent name="com.thrashplay.luna.engine" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\sandbox\games\luna\luna-core\src\main\java\com\thrashplay\luna\math" />
@@ -750,12 +767,12 @@
       <option name="presentableId" value="Default" />
       <updated>1524593535676</updated>
       <workItem from="1524593540413" duration="12298000" />
-      <workItem from="1524622592062" duration="32297000" />
+      <workItem from="1524622592062" duration="37621000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="44595000" />
+    <option name="totallyTimeSpent" value="49919000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
@@ -804,35 +821,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/luna-core/src/main/java/com/thrashplay/luna/graphics/FrameManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/particles-core/src/main/java/com/thrashplay/runetrace/ParticlesApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="18" column="66" selection-start-line="18" selection-start-column="66" selection-end-line="18" selection-end-column="66" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#516#517#0" expanded="true" />
-            <element signature="e#600#601#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/luna-core/src/main/java/com/thrashplay/luna/engine/entity/GameEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="424">
-          <caret line="157" column="13" lean-forward="true" selection-start-line="157" selection-start-column="13" selection-end-line="157" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/luna-core/src/main/java/com/thrashplay/luna/engine/entity/GameEntityAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
@@ -1158,16 +1146,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/luna-core/src/main/java/com/thrashplay/luna/desktop/swing/LunaCanvas.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="986">
-          <caret line="58" column="20" selection-start-line="58" selection-start-column="20" selection-end-line="58" selection-end-column="20" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/luna-core/src/main/java/com/thrashplay/luna/config/LunaGameConfig.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -1226,30 +1204,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/particles-core/src/main/java/com/thrashplay/runetrace/particle/RuneTraceParticleSystemBehavior.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="649">
-          <caret line="45" selection-start-line="45" selection-end-line="45" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#991#992#0" expanded="true" />
-            <element signature="e#1043#1044#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/particles-core/src/main/java/com/thrashplay/runetrace/screen/ParticlesScreen.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="45" column="141" selection-start-line="45" selection-start-column="141" selection-end-line="45" selection-end-column="141" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2457#2458#0" expanded="true" />
-            <element signature="e#2491#2492#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_111/src.zip!/java/awt/BasicStroke.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -1261,29 +1215,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/luna-core/src/main/java/com/thrashplay/luna/graphics/LunaGraphics.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="55" column="35" selection-start-line="55" selection-start-column="35" selection-end-line="55" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/luna-core/src/main/java/com/thrashplay/luna/desktop/graphics/Java2DGraphics.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="62" column="16" selection-start-line="62" selection-start-column="16" selection-end-line="62" selection-end-column="16" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1102#1103#0" expanded="true" />
-            <element signature="e#1159#1160#0" expanded="true" />
-            <element signature="e#1218#1219#0" expanded="true" />
-            <element signature="e#1272#1273#0" expanded="true" />
-            <element signature="e#1473#1474#0" expanded="true" />
-            <element signature="e#1520#1521#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/luna-core/src/main/java/com/thrashplay/luna/desktop/swing/LunaWindow.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="322">
@@ -1291,14 +1222,97 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_111/src.zip!/java/awt/Color.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="205">
+          <caret line="389" column="11" selection-start-line="389" selection-start-column="11" selection-end-line="389" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/particles-core/src/main/java/com/thrashplay/runetrace/facet/LineDrawingFacet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="19" selection-start-line="19" selection-end-line="19" />
+        <state relative-caret-position="322">
+          <caret line="52" column="50" lean-forward="true" selection-start-line="52" selection-start-column="50" selection-end-line="52" selection-end-column="50" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#641#642#0" expanded="true" />
-            <element signature="e#693#694#0" expanded="true" />
+            <element signature="e#712#713#0" expanded="true" />
+            <element signature="e#764#765#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/luna-core/src/main/java/com/thrashplay/luna/desktop/graphics/Java2DGraphics.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="283">
+          <caret line="87" column="26" selection-start-line="87" selection-start-column="26" selection-end-line="87" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1102#1103#0" expanded="true" />
+            <element signature="e#1159#1160#0" expanded="true" />
+            <element signature="e#1218#1219#0" expanded="true" />
+            <element signature="e#1305#1306#0" expanded="true" />
+            <element signature="e#1473#1474#0" expanded="true" />
+            <element signature="e#1520#1521#0" expanded="true" />
+            <element signature="e#2275#2276#0" expanded="true" />
+            <element signature="e#2306#2307#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/luna-core/src/main/java/com/thrashplay/luna/graphics/LunaGraphics.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="232">
+          <caret line="71" column="19" selection-start-line="71" selection-start-column="19" selection-end-line="71" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/luna-core/src/main/java/com/thrashplay/luna/desktop/swing/LunaCanvas.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="305">
+          <caret line="64" column="20" selection-start-line="64" selection-start-column="20" selection-end-line="64" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/particles-core/src/main/java/com/thrashplay/runetrace/screen/ParticlesScreen.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="373">
+          <caret line="46" column="145" lean-forward="true" selection-start-line="46" selection-start-column="17" selection-end-line="46" selection-end-column="145" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2457#2458#0" expanded="true" />
+            <element signature="e#2491#2492#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/particles-core/src/main/java/com/thrashplay/runetrace/facet/ShapeDrawingFacet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="509">
+          <caret line="55" column="116" selection-start-line="55" selection-start-column="116" selection-end-line="55" selection-end-column="116" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/particles-core/src/main/java/com/thrashplay/runetrace/particle/OngoingLineParticleSystemBehavior.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="233">
+          <caret line="61" column="90" selection-start-line="61" selection-start-column="90" selection-end-line="61" selection-end-column="90" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/particles-core/src/main/java/com/thrashplay/runetrace/particle/RuneTraceParticleSystemBehavior.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="904">
+          <caret line="91" lean-forward="true" selection-start-line="22" selection-start-column="45" selection-end-line="91" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#991#992#0" expanded="true" />
+            <element signature="e#1043#1044#0" expanded="true" />
           </folding>
         </state>
       </provider>

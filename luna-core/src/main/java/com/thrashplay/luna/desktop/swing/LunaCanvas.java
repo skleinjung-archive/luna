@@ -61,6 +61,9 @@ public class LunaCanvas extends Canvas implements FrameManager {
             graphics.fillRect(0, 0, getWidth(), getHeight());
             graphics.setTransform(tx);
 
+            RenderingHints rh = new RenderingHints(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
+            graphics.setRenderingHints(rh);
+
             // set the clip, so the canvas dimensions can be accessed by Drawable instances
             graphics.setClip(0, 0, sceneWidth, sceneHeight);
         }

@@ -36,6 +36,8 @@ public class LineDrawingFacet implements UpdateableFacet, RenderableFacet {
 
         if (pointerManager.isDragging()) {
             points.add(new LineDrawingPoint(pointerManager.getX(), pointerManager.getY(), 255));
+        } else if (points.size() > 0) {
+            points.get(points.size() - 1).penUp = true;
         }
     }
 
@@ -49,8 +51,11 @@ public class LineDrawingFacet implements UpdateableFacet, RenderableFacet {
                     LineDrawingPoint p2 = points.get(i);
 
                     graphics.setColor(Colors.pack(0xff, (int) (0xc3 * (p1.energy / 255D)), (int) (0x97 * (p1.energy / 255D)), (int) (0x38 * (p1.energy / 255D))));
-
                     graphics.drawLine(p1.x, p1.y, p2.x, p2.y);
+
+                    if (p2.penUp) {
+                        i++;
+                    }
                 }
             } finally {
                 graphics.setStrokeWidth(1);
@@ -62,6 +67,7 @@ public class LineDrawingFacet implements UpdateableFacet, RenderableFacet {
         private int x;
         private int y;
         private int energy;
+        private boolean penUp;
 
         public LineDrawingPoint(int x, int y, int energy) {
             this.x = x;

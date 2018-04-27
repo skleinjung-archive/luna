@@ -1,6 +1,6 @@
 package com.thrashplay.luna.graphics;
 
-import java.awt.Color;
+import java.awt.*;
 
 /**
  * @author Sean Kleinjung
@@ -68,6 +68,8 @@ public interface LunaGraphics {
     void drawCircle(int x, int y, int radius);
 
     void fillCircle(int x, int y, int radius);
+
+    void drawShape(Shape shape);
 
     void drawARGB(int a, int r, int g, int b);
 

@@ -13,6 +13,7 @@ import com.thrashplay.luna.particle.GravityParticle;
 import com.thrashplay.luna.particle.ParticlePool;
 import com.thrashplay.luna.particle.ParticleSystem;
 import com.thrashplay.runetrace.facet.LineDrawingFacet;
+import com.thrashplay.runetrace.facet.ShapeDrawingFacet;
 import com.thrashplay.runetrace.particle.RuneTraceParticleSystemBehavior;
 import org.springframework.stereotype.Component;
 import org.springframework.util.Assert;
@@ -49,7 +50,7 @@ public class ParticlesScreen extends DefaultScreen {
             position.setX(pointerManager.getX());
             position.setY(pointerManager.getY());
         });
-        particles.addFacet(new LineDrawingFacet(pointerManager));
+        particles.addFacet(new ShapeDrawingFacet(pointerManager));
         gem.register(particles);
 
 //        GameEntity rectangle = new GameEntity("rectangle");

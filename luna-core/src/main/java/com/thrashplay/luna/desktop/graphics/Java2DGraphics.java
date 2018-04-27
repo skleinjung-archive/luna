@@ -85,6 +85,11 @@ public class Java2DGraphics implements LunaGraphics {
     }
 
     @Override
+    public void drawShape(Shape shape) {
+        graphics.draw(shape);
+    }
+
+    @Override
     public void drawARGB(int a, int r, int g, int b) {
         graphics.setColor(new Color(r, g, b, a));
         java.awt.Rectangle clip = graphics.getClipBounds();
