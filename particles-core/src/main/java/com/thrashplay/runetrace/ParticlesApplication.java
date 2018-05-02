@@ -1,21 +1,19 @@
 package com.thrashplay.runetrace;
 
-import com.thrashplay.luna.spring.LunaApplication;
-import com.thrashplay.luna.config.DefaultLunaConfig;
-import com.thrashplay.luna.AbstractLunaApplication;
-import org.springframework.context.annotation.Bean;
+import com.thrashplay.luna.desktop.app.AbstractLunaApplication;
+import com.thrashplay.luna.desktop.app.ScreensConfigurer;
+import com.thrashplay.runetrace.screen.ParticlesScreen;
 
 /**
  * @author Sean Kleinjung
  */
-@LunaApplication
 public class ParticlesApplication extends AbstractLunaApplication {
     public static void main(String[] args) {
-        new ParticlesApplication().run(args);
+        new ParticlesApplication().run();
     }
 
-    @Bean
-    public DefaultLunaConfig getGameConfig() {
-        return new DefaultLunaConfig("particles", "Particles", 800, 600, 60);
+    @Override
+    protected void configureScreens(ScreensConfigurer screensConfigurer) {
+        screensConfigurer.addScreen(new ParticlesScreen(getPointerManager()), true);
     }
 }

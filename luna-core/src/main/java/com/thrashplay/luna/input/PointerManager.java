@@ -11,6 +11,6 @@ public interface PointerManager {
     int getY();
 
     // event-driven methods
-    void addPointerListener(PointerListener listener);
-    void removePointerListener(PointerListener listener);
+    //void addPointerListener(PointerListener listener);
+    //void removePointerListener(PointerListener listener);
 }

@@ -1,7 +1,7 @@
 package com.thrashplay.luna.desktop.graphics;
 
 import com.thrashplay.luna.graphics.LunaGraphics;
-import org.springframework.util.Assert;
+import com.thrashplay.luna.util.Assert;
 
 import java.awt.*;
 import java.awt.geom.AffineTransform;
@@ -18,7 +18,7 @@ public class Java2DGraphics implements LunaGraphics {
     private Stack<AffineTransform> savedTransforms = new Stack<>();
 
     public Java2DGraphics(Graphics2D graphics) {
-        Assert.notNull(graphics, "graphics cannot be null");
+        Assert.notNull(graphics, "graphics");
         this.graphics = graphics;
     }
 

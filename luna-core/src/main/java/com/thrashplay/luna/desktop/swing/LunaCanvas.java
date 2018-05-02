@@ -1,12 +1,10 @@
 package com.thrashplay.luna.desktop.swing;
 
-import com.thrashplay.luna.config.DefaultLunaConfig;
 import com.thrashplay.luna.geom.Rectangle;
 import com.thrashplay.luna.graphics.FrameManager;
 import com.thrashplay.luna.graphics.LunaGraphics;
 import com.thrashplay.luna.graphics.RenderCoordinateMapping;
 import com.thrashplay.luna.desktop.graphics.Java2DGraphics;
-import org.springframework.stereotype.Component;
 
 import java.awt.*;
 import java.awt.geom.AffineTransform;
@@ -16,7 +14,6 @@ import java.awt.image.BufferedImage;
 /**
  * @author Sean Kleinjung
  */
-@Component
 public class LunaCanvas extends Canvas implements FrameManager {
     // the buffer strategy used to handle page flipping
     private BufferStrategy bufferStrategy;
@@ -30,9 +27,15 @@ public class LunaCanvas extends Canvas implements FrameManager {
     private int sceneWidth;
     private int sceneHeight;
 
-    public LunaCanvas(DefaultLunaConfig config) {
-        this.sceneWidth = config.getSceneWidth();
-        this.sceneHeight = config.getSceneHeight();
+    public LunaCanvas() {
+        this(640, 480);
+    }
+
+    public LunaCanvas(int sceneWidth, int sceneHeight) {
+        this.sceneWidth = sceneWidth;
+        this.sceneHeight = sceneHeight;
+
+        setPreferredSize(new Dimension(sceneWidth, sceneHeight));
     }
 
     /**

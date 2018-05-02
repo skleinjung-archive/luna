@@ -12,22 +12,19 @@ import com.thrashplay.luna.renderable.FpsDisplay;
 import com.thrashplay.luna.particle.GravityParticle;
 import com.thrashplay.luna.particle.ParticlePool;
 import com.thrashplay.luna.particle.ParticleSystem;
-import com.thrashplay.runetrace.facet.LineDrawingFacet;
+import com.thrashplay.luna.util.Assert;
 import com.thrashplay.runetrace.facet.ShapeDrawingFacet;
 import com.thrashplay.runetrace.particle.RuneTraceParticleSystemBehavior;
-import org.springframework.stereotype.Component;
-import org.springframework.util.Assert;
 
 /**
  * @author Sean Kleinjung
  */
-@Component
 public class ParticlesScreen extends DefaultScreen {
 
     private PointerManager pointerManager;
 
     public ParticlesScreen(PointerManager pointerManager) {
-        Assert.notNull(pointerManager, "pointerManager cannot be null");
+        Assert.notNull(pointerManager, "pointerManager");
         this.pointerManager = pointerManager;
     }
 

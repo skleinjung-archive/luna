@@ -1,14 +1,9 @@
 package com.thrashplay.luna.engine.loop;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 /**
  * @author Sean Kleinjung
  */
 public abstract class AbstractSingleThreadGameLoop extends AbstractGameLoop {
-
-    private static final Logger log = LoggerFactory.getLogger(AbstractSingleThreadGameLoop.class);
 
     protected volatile boolean running = false;
     private Thread thread = null;
@@ -21,7 +16,7 @@ public abstract class AbstractSingleThreadGameLoop extends AbstractGameLoop {
 
     @Override
     public void pause() {
-        log.debug("Pausing game loop...");
+//        log.debug("Pausing game loop...");
 
         running = false;
         while (thread.isAlive()) {
@@ -35,7 +30,7 @@ public abstract class AbstractSingleThreadGameLoop extends AbstractGameLoop {
 
     @Override
     public void resume() {
-        log.debug("Resuming game loop...");
+//        log.debug("Resuming game loop...");
 
         running = true;
         Runnable runnable = getRunnable();

@@ -2,12 +2,9 @@ package com.thrashplay.luna.engine.screen;
 
 import com.thrashplay.luna.LunaException;
 import com.thrashplay.luna.config.LunaGameConfig;
-import com.thrashplay.luna.engine.Updateable;
 import com.thrashplay.luna.graphics.LunaGraphics;
-import org.springframework.stereotype.Component;
-import org.springframework.util.Assert;
+import com.thrashplay.luna.util.Assert;
 
-import java.awt.*;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -15,15 +12,13 @@ import java.util.Map;
 /**
  * @author Sean Kleinjung
  */
-@Component
 public class DefaultScreenManager implements ScreenManager {
 
     private Screen currentScreen;
     private Map<String, Screen> screens = new HashMap<>();
 
-    public DefaultScreenManager(LunaGameConfig gameConfig, List<Screen> screens) {
-        Assert.notNull(gameConfig,"gameConfig cannot be null");
-
+    public DefaultScreenManager(List<Screen> screens, String defaultScreen) {
+        Assert.notNull(defaultScreen, "defaultScreen");
         if (screens == null || screens.size() < 1) {
             throw new IllegalArgumentException("At least one screen must be specified");
         }
@@ -31,7 +26,7 @@ public class DefaultScreenManager implements ScreenManager {
         for (Screen screen : screens) {
             registerScreen(screen);
         }
-        setScreen(gameConfig.getDefaultScreen());
+        setScreen(defaultScreen);
     }
 
     private void registerScreen(Screen screen) {

@@ -3,7 +3,7 @@ package com.thrashplay.luna.config;
 /**
  * @author Sean Kleinjung
  */
-public class DefaultLunaConfig implements LunaGameConfig, LunaLoopConfig, LunaSceneConfig, LunaWindowConfig {
+public class DefaultLunaConfig implements LunaConfig {
 
     private String defaultScreen;
     private String windowTitle;

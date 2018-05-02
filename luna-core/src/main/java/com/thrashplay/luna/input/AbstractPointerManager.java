@@ -26,14 +26,14 @@ public abstract class AbstractPointerManager implements PointerManager {
         }
     }
 
-    @Override
+//    @Override
     public void addPointerListener(PointerListener listener) {
         if (listener != null) {
             pointerListeners.add(listener);
         }
     }
 
-    @Override
+//    @Override
     public void removePointerListener(PointerListener listener) {
         if (listener != null) {
             pointerListeners.remove(listener);

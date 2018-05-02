@@ -5,22 +5,20 @@ import com.thrashplay.luna.engine.loop.GameLoopUpdateCallback;
 import com.thrashplay.luna.engine.screen.ScreenManager;
 import com.thrashplay.luna.graphics.FrameManager;
 import com.thrashplay.luna.graphics.LunaGraphics;
-import org.springframework.stereotype.Component;
-import org.springframework.util.Assert;
+import com.thrashplay.luna.util.Assert;
 
 /**
  * @author Sean Kleinjung
  */
-@Component
 public class RenderScreensToFrameManagerController implements GameLoopUpdateCallback, GameLoopRenderCallback {
     private FrameManager frameManager;
     private ScreenManager screenManager;
 
     public RenderScreensToFrameManagerController(FrameManager frameManager, ScreenManager screenManager) {
-        Assert.notNull(frameManager, "frameManager cannot be null");
+        Assert.notNull(frameManager, "frameManager");
         this.frameManager = frameManager;
 
-        Assert.notNull(screenManager, "screenManager cannot be null");
+        Assert.notNull(screenManager, "screenManager");
         this.screenManager = screenManager;
     }
 

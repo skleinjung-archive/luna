@@ -32,11 +32,12 @@ public class OngoingLineParticleSystemBehavior implements ParticleSystemBehavior
 
     @Override
     public int getNumberOfParticlesToEmit(GameEntity entity, ParticleSystem particleSystem, float delta) {
-        if (Random.getInteger(0, 5) == 0) {
-            return 1;
-        } else {
-            return 0;
-        }
+//        if (Random.getInteger(0, 2) == 0) {
+//            return 1;
+//        } else {
+//            return 0;
+//        }
+        return 2;
     }
 
     @Override
@@ -68,11 +69,11 @@ public class OngoingLineParticleSystemBehavior implements ParticleSystemBehavior
 
     @Override
     public void updateParticle(GameEntity entity, ParticleSystem<GravityParticle> particleSystem, float delta, GravityParticle particle) {
-        double magnitude = (particle.getEnergy() / 255D);
+        double magnitude = (particle.getEnergy() / 255D) * 4D;
 
         particle.setX(particle.getX() + particle.getDirection().getX() * magnitude);
         particle.setY(particle.getY() + particle.getDirection().getY() * magnitude);
-        particle.setEnergy(particle.getEnergy() / 1.01);
+        particle.setEnergy(particle.getEnergy() / 1.07);
         if (particle.getEnergy() < 32) {
             particle.setEnergy(0);
         }

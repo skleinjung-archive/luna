@@ -7,7 +7,7 @@ import com.thrashplay.luna.facet.Position;
 import com.thrashplay.luna.facet.Renderer;
 import com.thrashplay.luna.graphics.LunaGraphics;
 import com.thrashplay.luna.graphics.Renderable;
-import org.springframework.util.Assert;
+import com.thrashplay.luna.util.Assert;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -34,7 +34,7 @@ public class GameEntity implements Updateable, Renderable {
     private Movement movement;
 
     public GameEntity(String id) {
-        Assert.notNull(id, "id cannot be null");
+        Assert.notNull(id, "id");
         this.id = id;
     }
 

@@ -6,8 +6,6 @@ import com.thrashplay.luna.geom.Point;
 import com.thrashplay.luna.graphics.RenderCoordinateMapping;
 import com.thrashplay.luna.input.AbstractPointerManager;
 import com.thrashplay.luna.input.PointerEvent;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
 
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
@@ -15,7 +13,6 @@ import java.awt.event.MouseEvent;
 /**
  * @author Sean Kleinjung
  */
-@Component
 public class MousePointerManager extends AbstractPointerManager {
 
     private LunaCanvas canvas;
@@ -28,7 +25,6 @@ public class MousePointerManager extends AbstractPointerManager {
     private int x;
     private int y;
 
-    @Autowired
     public MousePointerManager(LunaCanvas canvas, LunaSceneConfig config) {
         this(canvas, config.getSceneWidth(), config.getSceneHeight());
     }
