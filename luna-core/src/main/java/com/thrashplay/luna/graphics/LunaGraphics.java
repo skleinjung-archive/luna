@@ -1,6 +1,6 @@
 package com.thrashplay.luna.graphics;
 
-import java.awt.*;
+import com.thrashplay.luna.geom.Path;
 
 /**
  * @author Sean Kleinjung
@@ -69,7 +69,7 @@ public interface LunaGraphics {
 
     void fillCircle(int x, int y, int radius);
 
-    void drawShape(Shape shape);
+    void drawShape(Path path);
 
     void drawARGB(int a, int r, int g, int b);
 

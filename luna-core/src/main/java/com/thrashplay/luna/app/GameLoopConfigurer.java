@@ -1,4 +1,4 @@
-package com.thrashplay.luna.desktop.app;
+package com.thrashplay.luna.app;
 
 /**
  * @author Sean Kleinjung

@@ -1,9 +1,9 @@
-package com.thrashplay.luna.desktop.app;
+package com.thrashplay.luna.app;
 
 /**
  * @author Sean Kleinjung
  */
-public interface WindowConfigurer {
+public interface ViewConfigurer {
     void setTitle(String title);
     void setSceneDimensions(int sceneWidth, int sceneHeight);
 }

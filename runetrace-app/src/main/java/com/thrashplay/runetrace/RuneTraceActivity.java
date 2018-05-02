@@ -1,13 +1,12 @@
 package com.thrashplay.runetrace;
 
-import android.app.Activity;
-import android.os.Bundle;
+import com.thrashplay.luna.android.app.LunaGame;
+import com.thrashplay.luna.app.LunaAppConfiguration;
+import com.thrashplay.runetrace.app.RunetraceAppConfig;
 
-public class RuneTraceActivity extends Activity {
-
+public class RuneTraceActivity extends LunaGame {
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_particles);
+    protected LunaAppConfiguration getAppConfiguration() {
+        return new RunetraceAppConfig();
     }
 }

@@ -1,18 +1,16 @@
-package com.thrashplay.runetrace.desktop.facet;
+package com.thrashplay.runetrace.facet;
 
 import com.thrashplay.luna.engine.entity.GameEntity;
 import com.thrashplay.luna.engine.entity.RenderableFacet;
 import com.thrashplay.luna.engine.entity.UpdateableFacet;
+import com.thrashplay.luna.geom.Path;
 import com.thrashplay.luna.graphics.Colors;
 import com.thrashplay.luna.graphics.LunaGraphics;
 import com.thrashplay.luna.input.PointerManager;
-import com.thrashplay.luna.math.Random;
 import com.thrashplay.luna.particle.GravityParticle;
 import com.thrashplay.luna.particle.ParticlePool;
 import com.thrashplay.luna.particle.ParticleSystem;
-import com.thrashplay.runetrace.desktop.particle.OngoingLineParticleSystemBehavior;
-
-import java.awt.geom.Path2D;
+import com.thrashplay.runetrace.particle.OngoingLineParticleSystemBehavior;
 
 /**
  * @author Sean Kleinjung
@@ -22,7 +20,7 @@ public class ShapeDrawingFacet implements UpdateableFacet, RenderableFacet {
     boolean wasDragging = false;
 
     private PointerManager pointerManager;
-    private Path2D.Float currentPath = new Path2D.Float();
+    private Path currentPath = new Path();
 
     private float glowAlpha = 110;
     private boolean glowIncreasing = true;

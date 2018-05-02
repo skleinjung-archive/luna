@@ -1,6 +1,6 @@
-package com.thrashplay.luna.desktop.app.builder;
+package com.thrashplay.luna.app.builder;
 
-import com.thrashplay.luna.desktop.app.GameLoopConfigurer;
+import com.thrashplay.luna.app.GameLoopConfigurer;
 import com.thrashplay.luna.engine.loop.FixedFpsSingleThreadGameLoop;
 import com.thrashplay.luna.engine.loop.GameLoop;
 import com.thrashplay.luna.engine.loop.GameLoopRenderCallback;

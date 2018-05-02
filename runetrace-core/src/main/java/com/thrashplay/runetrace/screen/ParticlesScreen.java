@@ -1,4 +1,4 @@
-package com.thrashplay.runetrace.desktop.screen;
+package com.thrashplay.runetrace.screen;
 
 import com.thrashplay.luna.engine.entity.GameEntity;
 import com.thrashplay.luna.engine.entity.GameEntityAdapter;
@@ -13,8 +13,8 @@ import com.thrashplay.luna.particle.GravityParticle;
 import com.thrashplay.luna.particle.ParticlePool;
 import com.thrashplay.luna.particle.ParticleSystem;
 import com.thrashplay.luna.util.Assert;
-import com.thrashplay.runetrace.desktop.facet.ShapeDrawingFacet;
-import com.thrashplay.runetrace.desktop.particle.RuneTraceParticleSystemBehavior;
+import com.thrashplay.runetrace.facet.ShapeDrawingFacet;
+import com.thrashplay.runetrace.particle.RuneTraceParticleSystemBehavior;
 
 /**
  * @author Sean Kleinjung

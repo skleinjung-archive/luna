@@ -2,9 +2,7 @@ apply plugin: 'java-library'
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-
-    api project(':luna-desktop')
-    api project(':runetrace-core')
+    api project(':luna-core')
 }
 
 sourceCompatibility = "1.7"

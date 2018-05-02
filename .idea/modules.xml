@@ -7,6 +7,7 @@
       <module fileurl="file://$PROJECT_DIR$/luna-core/luna-core.iml" filepath="$PROJECT_DIR$/luna-core/luna-core.iml" />
       <module fileurl="file://$PROJECT_DIR$/luna-desktop/luna-desktop.iml" filepath="$PROJECT_DIR$/luna-desktop/luna-desktop.iml" />
       <module fileurl="file://$PROJECT_DIR$/runetrace-app/runetrace-app.iml" filepath="$PROJECT_DIR$/runetrace-app/runetrace-app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/runetrace-core/runetrace-core.iml" filepath="$PROJECT_DIR$/runetrace-core/runetrace-core.iml" />
       <module fileurl="file://$PROJECT_DIR$/runetrace-desktop/runetrace-desktop.iml" filepath="$PROJECT_DIR$/runetrace-desktop/runetrace-desktop.iml" />
     </modules>
   </component>

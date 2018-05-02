@@ -1,6 +1,6 @@
-package com.thrashplay.luna.desktop.app.builder;
+package com.thrashplay.luna.app.builder;
 
-import com.thrashplay.luna.desktop.app.ScreensConfigurer;
+import com.thrashplay.luna.app.ScreensConfigurer;
 import com.thrashplay.luna.engine.screen.DefaultScreenManager;
 import com.thrashplay.luna.engine.screen.Screen;
 import com.thrashplay.luna.engine.screen.ScreenManager;

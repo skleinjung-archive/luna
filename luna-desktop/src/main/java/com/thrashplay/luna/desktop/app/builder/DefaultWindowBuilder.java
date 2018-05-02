@@ -1,13 +1,13 @@
 package com.thrashplay.luna.desktop.app.builder;
 
-import com.thrashplay.luna.desktop.app.WindowConfigurer;
+import com.thrashplay.luna.app.ViewConfigurer;
 import com.thrashplay.luna.desktop.swing.LunaCanvas;
 import com.thrashplay.luna.desktop.swing.LunaWindow;
 
 /**
  * @author Sean Kleinjung
  */
-public class DefaultWindowBuilder implements WindowConfigurer {
+public class DefaultWindowBuilder implements ViewConfigurer {
     private String title;
     private int sceneWidth;
     private int sceneHeight;

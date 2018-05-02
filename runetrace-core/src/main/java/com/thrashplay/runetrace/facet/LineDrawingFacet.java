@@ -1,4 +1,4 @@
-package com.thrashplay.runetrace.desktop.facet;
+package com.thrashplay.runetrace.facet;
 
 import com.thrashplay.luna.engine.entity.GameEntity;
 import com.thrashplay.luna.engine.entity.RenderableFacet;

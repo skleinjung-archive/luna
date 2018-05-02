@@ -1,9 +1,15 @@
 package com.thrashplay.luna.desktop.graphics;
 
+import com.thrashplay.luna.geom.Path;
 import com.thrashplay.luna.graphics.LunaGraphics;
 import com.thrashplay.luna.util.Assert;
 
-import java.awt.*;
+import java.awt.BasicStroke;
+import java.awt.Color;
+import java.awt.FontMetrics;
+import java.awt.Graphics2D;
+import java.awt.Rectangle;
+import java.awt.Shape;
 import java.awt.geom.AffineTransform;
 import java.util.Stack;
 
@@ -85,8 +91,8 @@ public class Java2DGraphics implements LunaGraphics {
     }
 
     @Override
-    public void drawShape(Shape shape) {
-        graphics.draw(shape);
+    public void drawShape(Path path) {
+        graphics.draw((Shape) path.getNativePath());
     }
 
     @Override
