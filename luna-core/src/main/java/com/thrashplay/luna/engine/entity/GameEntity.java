@@ -10,7 +10,9 @@ import com.thrashplay.luna.graphics.Renderable;
 import com.thrashplay.luna.util.Assert;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
+import java.util.function.Predicate;
 
 /**
  * @author Sean Kleinjung
@@ -76,7 +78,7 @@ public class GameEntity implements Updateable, Renderable {
     }
 
     @SuppressWarnings({"unchecked"})
-    public void removeFacet(Class type) {
+    public void removeFacet(final Class type) {
         // remove cache references
         if (Renderer.class.equals(type)) {
             renderer = null;
@@ -86,7 +88,13 @@ public class GameEntity implements Updateable, Renderable {
             movement = null;
         }
 
-        facets.removeIf(facet -> type.isAssignableFrom(facet.getClass()));
+        Iterator iterator = facets.iterator();
+        while (iterator.hasNext()) {
+            Object facet = iterator.next();
+            if (type.isAssignableFrom(facet.getClass())) {
+                iterator.remove();
+            }
+        }
     }
 
     @SuppressWarnings({"unchecked"})

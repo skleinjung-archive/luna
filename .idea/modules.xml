@@ -2,10 +2,12 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/luna.iml" filepath="$PROJECT_DIR$/luna.iml" />
+      <module fileurl="file://$PROJECT_DIR$/luna-android/luna-android.iml" filepath="$PROJECT_DIR$/luna-android/luna-android.iml" />
       <module fileurl="file://$PROJECT_DIR$/luna-core/luna-core.iml" filepath="$PROJECT_DIR$/luna-core/luna-core.iml" />
-      <module fileurl="file://$PROJECT_DIR$/particles-aggregator.iml" filepath="$PROJECT_DIR$/particles-aggregator.iml" />
-      <module fileurl="file://$PROJECT_DIR$/particles-core/particles-core.iml" filepath="$PROJECT_DIR$/particles-core/particles-core.iml" />
-      <module fileurl="file://$PROJECT_DIR$/particles-parent/particles-parent.iml" filepath="$PROJECT_DIR$/particles-parent/particles-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/luna-desktop/luna-desktop.iml" filepath="$PROJECT_DIR$/luna-desktop/luna-desktop.iml" />
+      <module fileurl="file://$PROJECT_DIR$/runetrace-app/runetrace-app.iml" filepath="$PROJECT_DIR$/runetrace-app/runetrace-app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/runetrace-desktop/runetrace-desktop.iml" filepath="$PROJECT_DIR$/runetrace-desktop/runetrace-desktop.iml" />
     </modules>
   </component>
 </project>

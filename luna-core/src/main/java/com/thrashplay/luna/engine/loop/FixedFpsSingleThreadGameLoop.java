@@ -22,30 +22,32 @@ public class FixedFpsSingleThreadGameLoop extends AbstractSingleThreadGameLoop {
 
     @Override
     protected Runnable getRunnable() {
-        return () -> {
-            Timing timing = new Timing();
-            timing.reset();
-            long elapsed = 0;
-            long frameDurationInNanos = Math.round(1000D / targetUpdatesPerSecond * 1000000D);
-
-            while (running) {
-                elapsed += timing.elapsedAs(TimeUnit.NANOSECONDS);
+        return new Runnable() {
+            public void run() {
+                Timing timing = new Timing();
                 timing.reset();
+                long elapsed = 0;
+                long frameDurationInNanos = Math.round(1000D / targetUpdatesPerSecond * 1000000D);
 
-                while (elapsed >= frameDurationInNanos) {
-                    update(1.0f);
-                    elapsed -= frameDurationInNanos;
-                }
+                while (running) {
+                    elapsed += timing.elapsedAs(TimeUnit.NANOSECONDS);
+                    timing.reset();
 
-                render();
+                    while (elapsed >= frameDurationInNanos) {
+                        update(1.0f);
+                        elapsed -= frameDurationInNanos;
+                    }
 
-                // we wait for 1ms because the observed updates per second is 1/2 the requested when we don't
+                    render();
+
+                    // we wait for 1ms because the observed updates per second is 1/2 the requested when we don't
 //                synchronized (Thread.currentThread()) {
 //                    try {
 //                        Thread.currentThread().wait(1);
 //                    } catch (InterruptedException e) { /* do nothing */ }
 //                }
-                Thread.yield();
+                    Thread.yield();
+                }
             }
         };
     }
